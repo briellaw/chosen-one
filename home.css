@@ -1,0 +1,112 @@
+#home-page {
+    height: 100vh;
+    width: 100vh;
+    position:relative;
+    background-image: url(home-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+    margin:0;
+    overflow: hidden;
+}
+
+#egg-area {
+    position: absolute;
+    bottom: 17vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 250px;
+    height: 250px;
+}
+
+#cushion {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    z-index: 1;
+}
+
+#egg {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    z-index: 2;
+}
+
+#action-bar {
+    z-index: 3;
+    position: absolute;
+    bottom: 0vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 25px;
+}
+
+#clean,
+#feed,
+#tickle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clean img,
+#feed img,
+#tickle img {
+    width: 100px;
+    height: 100px;
+}
+
+#clean p,
+#feed p,
+#tickle p {
+    margin-top: 0px;
+    color: #fffffe;
+    text-shadow: 0 0 8px black;
+    font-size: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.bounce {
+  animation: bounce 0.5s;
+}
+
+.wiggle {
+  animation: wiggle 0.5s;
+}
+
+@keyframes bounce {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes wiggle {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(8deg); }
+  50% { transform: translateX(-50%) rotate(-8deg); }
+  75% { transform: translateX(-50%) rotate(8deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
+
+#cloth-tool {
+    position: fixed;
+    width: 80px;
+    display: none;
+    z-index: 999;
+    pointer-events: none;
+}
